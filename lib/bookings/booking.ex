@@ -4,10 +4,9 @@ defmodule Flightex.Bookings.Booking do
   defstruct @keys
 
   def build(complete_date, local_origin, local_destination, user_id) do
-    id = UUID.uuid4()
 
     {:ok, %__MODULE__{
-      id: id,
+      id: UUID.uuid4(),
       complete_date: complete_date,
       local_origin: local_origin,
       local_destination: local_destination,
